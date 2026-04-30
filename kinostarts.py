@@ -1,92 +1,131 @@
-import requests
-from bs4 import BeautifulSoup
+"""
+kinokalender — Generates a Kinostarts ICS calendar from IMDb's German theatrical calendar.
+
+Source:  https://www.imdb.com/calendar/?region=DE&type=MOVIE
+Output:  kinostarts.ics
+
+Each ICS event carries:
+- SUMMARY:     🍿 <Title>
+- DTSTART:     German theatrical release date (all-day)
+- UID:         <imdbId>-<yyyy-mm-dd>@imdb-de-calendar
+- URL:         https://www.imdb.com/title/<imdbId>/
+- DESCRIPTION: structured "Key: Value" lines, parseable by consumers
+                 IMDB: tt1234567
+                 Poster: https://m.media-amazon.com/...
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from datetime import datetime, date as DateType
+from pathlib import Path
+from typing import TypedDict
+
 from ics import Calendar, Event
-from datetime import datetime
-from collections import defaultdict
+from scrapling.fetchers import StealthyFetcher
 
-# URL der Filmvorschau-Seiten
-BASE_URL = "https://www.filmstarts.de/filme-vorschau/?page={}"
 
-# Deutsche Monatsnamen übersetzen
-GERMAN_MONTHS = {
-    "Januar": "January", "Februar": "February", "März": "March",
-    "April": "April", "Mai": "May", "Juni": "June",
-    "Juli": "July", "August": "August", "September": "September",
-    "Oktober": "October", "November": "November", "Dezember": "December"
-}
+URL = "https://www.imdb.com/calendar/?region=DE&type=MOVIE"
+OUTPUT = "kinostarts.ics"
 
-def translate_month(date_str):
-    """Übersetzt Monatsnamen ins Englische für datetime-Kompatibilität."""
-    for de, en in GERMAN_MONTHS.items():
-        if de in date_str:
-            return date_str.replace(de, en)
-    return date_str
+NEXT_DATA_RE = re.compile(
+    r'<script id="__NEXT_DATA__" type="application/json">(.+?)</script>',
+    re.DOTALL,
+)
 
-def remove_duplicates_by_title(movies):
-    """
-    Behalte nur den frühesten Termin pro Filmname.
-    """
-    earliest = defaultdict(lambda: datetime.max.date())
-    for title, date in movies:
-        if date < earliest[title]:
-            earliest[title] = date
-    return list(earliest.items())
 
-def scrape_all_pages(max_safe_pages=30):
-    """Liest alle Seiten der Filmvorschau, bis keine weiteren Filme gefunden werden."""
-    page = 1
-    all_entries = []
+class Movie(TypedDict):
+    imdb_id: str
+    title: str
+    date: DateType
+    poster_url: str | None
 
-    while page <= max_safe_pages:
-        url = BASE_URL.format(page)
-        print(f"🔎 Lade Seite {page}: {url}")
-        response = requests.get(url)
-        soup = BeautifulSoup(response.text, "html.parser")
 
-        film_items = soup.select("div.card.entity-card.entity-card-list")
-        if not film_items:
-            print("🚫 Keine weiteren Filme gefunden – Abbruch.")
-            break
+def fetch_next_data(url: str) -> dict:
+    """Open IMDb's calendar in a stealth browser and return the parsed __NEXT_DATA__ JSON."""
+    print(f"🔎 Lade {url}", flush=True)
+    page = StealthyFetcher.fetch(
+        url,
+        headless=True,
+        network_idle=True,
+        timeout=60_000,
+        wait_selector="script#__NEXT_DATA__",
+    )
+    if page.status != 200:
+        raise RuntimeError(f"unexpected HTTP status from IMDb: {page.status}")
+    html = page.html_content or ""
+    match = NEXT_DATA_RE.search(html)
+    if not match:
+        raise RuntimeError("__NEXT_DATA__ script tag not found in IMDb response")
+    return json.loads(match.group(1))
 
-        for item in film_items:
-            title_tag = item.select_one("h2.meta-title a.meta-title-link")
-            date_tag = item.select_one("div.meta-body-info span.date")
-            if not title_tag or not date_tag:
+
+def extract_movies(next_data: dict) -> list[Movie]:
+    """Pull movie entries out of the IMDb calendar JSON. TV titles are skipped."""
+    groups = (
+        next_data.get("props", {})
+        .get("pageProps", {})
+        .get("groups", [])
+    )
+    movies: list[Movie] = []
+    for group in groups:
+        raw_date = group.get("group")
+        try:
+            release = datetime.strptime(raw_date, "%b %d, %Y").date()
+        except (TypeError, ValueError):
+            print(f"⚠️ Datum nicht parsebar: {raw_date!r}", flush=True)
+            continue
+        for entry in group.get("entries", []):
+            if entry.get("titleType", {}).get("id") != "movie":
                 continue
-
-            title = title_tag.text.strip()
-            raw_date = date_tag.text.strip()
-            translated_date = translate_month(raw_date)
-
-            try:
-                date = datetime.strptime(translated_date, "%d. %B %Y").date()
-            except ValueError:
+            imdb_id = entry.get("id")
+            title = entry.get("titleText")
+            if not imdb_id or not title:
                 continue
+            image_model = entry.get("imageModel") or {}
+            movies.append({
+                "imdb_id": imdb_id,
+                "title": title,
+                "date": release,
+                "poster_url": image_model.get("url"),
+            })
+    return movies
 
-            all_entries.append((title, date))
 
-        page += 1
-
-    return all_entries
-
-def create_ics_file(movies, filename="kinostarts.ics"):
-    """Erzeugt eine .ics-Kalenderdatei aus den Kinostarts."""
+def write_ics(movies: list[Movie], filename: str = OUTPUT) -> None:
+    """Write an ICS file with one event per movie."""
     calendar = Calendar()
-    for title, date in movies:
+    for m in movies:
         event = Event()
-        event.name = f"🍿 {title}"
-        event.begin = date.isoformat()
+        event.name = f"🍿 {m['title']}"
+        event.begin = m["date"].isoformat()
         event.make_all_day()
+        event.uid = f"{m['imdb_id']}-{m['date'].isoformat()}@imdb-de-calendar"
+        event.url = f"https://www.imdb.com/title/{m['imdb_id']}/"
+        desc_lines = [f"IMDB: {m['imdb_id']}"]
+        if m.get("poster_url"):
+            desc_lines.append(f"Poster: {m['poster_url']}")
+        event.description = "\n".join(desc_lines)
         calendar.events.add(event)
+    Path(filename).write_text("".join(calendar), encoding="utf-8")
+    print(f"✅ {len(movies)} Filme exportiert nach '{filename}'", flush=True)
 
-    with open(filename, "w", encoding="utf-8") as f:
-        f.writelines(calendar)
-    print(f"\n✅ {len(movies)} Filme exportiert nach '{filename}'")
+
+def main() -> int:
+    try:
+        next_data = fetch_next_data(URL)
+    except Exception as exc:
+        print(f"❌ Fetch fehlgeschlagen: {exc}", file=sys.stderr, flush=True)
+        return 1
+    movies = extract_movies(next_data)
+    if not movies:
+        print("⚠️ Keine Filme aus IMDb extrahiert", file=sys.stderr, flush=True)
+        return 1
+    write_ics(movies)
+    return 0
+
 
 if __name__ == "__main__":
-    kinostarts = scrape_all_pages()
-    if kinostarts:
-        unique_kinostarts = remove_duplicates_by_title(kinostarts)
-        create_ics_file(unique_kinostarts)
-    else:
-        print("⚠️ Keine Filme gefunden.")
+    sys.exit(main())
