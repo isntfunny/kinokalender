@@ -3,3 +3,4 @@ scrapling
 ics
 playwright
 patchright
+msgspec
