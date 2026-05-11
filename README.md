@@ -31,7 +31,7 @@ Output: `kinostarts.ics` in the current directory.
 
 ## How it works
 
-IMDb's calendar page is a Next.js app behind an Amazon WAF JS-challenge. We use [Scrapling](https://github.com/D4Vinci/Scrapling)'s `StealthyFetcher` (camoufox-backed) to render the page, then extract the `__NEXT_DATA__` JSON blob — no DOM scraping needed. The JSON already groups movies by release date and includes the IMDB id, title, and poster URL natively.
+IMDb's calendar page is a Next.js app behind an Amazon WAF JS-challenge. We first try a browserless HTTP fetch and parse the `__NEXT_DATA__` blob directly. If that fails, we fall back to [Scrapling](https://github.com/D4Vinci/Scrapling)'s `StealthyFetcher` (camoufox-backed) to render the page. The JSON already groups movies by release date and includes the IMDB id, title, and poster URL natively.
 
 ## Update cadence
 
