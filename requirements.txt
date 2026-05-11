@@ -4,3 +4,4 @@ ics
 playwright
 patchright
 msgspec
+browserforge
