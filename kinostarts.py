@@ -23,7 +23,6 @@ from datetime import datetime, date as DateType
 from pathlib import Path
 from typing import TypedDict
 
-from curl_cffi import requests
 from ics import Calendar, Event
 from scrapling.fetchers import StealthyFetcher
 
@@ -44,21 +43,6 @@ class Movie(TypedDict):
     poster_url: str | None
 
 
-def browserless_fetch_html(url: str) -> tuple[int, str]:
-    """Fetch IMDb's calendar page without starting a browser session."""
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Referer": "https://www.imdb.com/",
-    }
-    try:
-        response = requests.get(url, headers=headers, timeout=30)
-    except Exception as exc:
-        raise RuntimeError(f"browserless fetch failed: {exc}") from exc
-    return response.status_code, response.text
-
-
 def _parse_next_data(html: str) -> dict:
     match = NEXT_DATA_RE.search(html)
     if not match:
@@ -67,21 +51,8 @@ def _parse_next_data(html: str) -> dict:
 
 
 def fetch_next_data(url: str) -> dict:
-    """Load IMDb's calendar and return the parsed __NEXT_DATA__ JSON.
-
-    We first try a browserless HTTP fetch. If the WAF or page response does not
-    contain the expected JSON blob, we fall back to the stealth browser fetch.
-    """
-    print(f"🔎 Versuche browserlosen Fetch für {url}", flush=True)
-    try:
-        status, html = browserless_fetch_html(url)
-        if status == 200:
-            return _parse_next_data(html)
-        print(f"⚠️ Browserloser Fetch HTTP {status}, falls verfügbarer Fallback", flush=True)
-    except Exception as exc:
-        print(f"⚠️ Browserloser Fetch fehlgeschlagen: {exc}", flush=True)
-
-    print(f"🔎 Fallback auf Browser-Fetch für {url}", flush=True)
+    """Open IMDb's calendar in a stealth browser and return the parsed __NEXT_DATA__ JSON."""
+    print(f"🔎 Lade {url}", flush=True)
     page = StealthyFetcher.fetch(
         url,
         headless=True,

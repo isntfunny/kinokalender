@@ -1,5 +1,8 @@
 name: Update Kinostarts Kalender
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 8 * * 1'  # Jeden Montag um 08:00 UTC
