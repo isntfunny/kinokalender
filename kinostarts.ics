@@ -2,13 +2,6 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt32919616\nPoster: https://m.media-amazon.com/images/M/MV5BM2Y5MTcxNzktNWNjYS00NTg1LTg5ZGEtZGRmN2RlYTk0ZjMzXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Broken Vein
-UID:tt32919616-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt32919616/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260625
 DESCRIPTION:IMDB: tt32267691\nPoster: https://m.media-amazon.com/images/M/MV5BYWI3NGZlNDQtMTAwMC00MGVmLTkyMzgtNjNmYjFhY2VhNDUyXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Power Ballad
@@ -100,13 +93,6 @@ UID:tt38886307-2026-12-26@imdb-de-calendar
 URL:https://www.imdb.com/title/tt38886307/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt42006709\nPoster: https://m.media-amazon.com/images/M/MV5BYmIxYWE2ZWYtMjk2NS00YzUyLWIyMjYtN2I0NjdiMjMxYjAwXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Siccin 9
-UID:tt42006709-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt42006709/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260528
 DESCRIPTION:IMDB: tt32306991\nPoster: https://m.media-amazon.com/images/M/MV5BYmU0ZTExNGMtZGEyMS00NzQ0LTk1MGUtZjlkZTAxZDRlNWI1XkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Solo Mio
@@ -121,25 +107,11 @@ UID:tt32557122-2026-12-10@imdb-de-calendar
 URL:https://www.imdb.com/title/tt32557122/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt32641442\nPoster: https://m.media-amazon.com/images/M/MV5BMDQ2MDE5MmQtODQzZC00MzkxLThkZTAtNzYxNDY0MmZlMjU5XkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Merrily We Roll Along
-UID:tt32641442-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt32641442/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261112
 DESCRIPTION:IMDB: tt29003256\nPoster: https://m.media-amazon.com/images/M/MV5BOWMyNDEwMTEtODA3ZS00ZDMyLTkzZmQtN2I2MWU0YTJlZjQ1XkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 The Elf and the Christmas Wonder
 UID:tt29003256-2026-11-12@imdb-de-calendar
 URL:https://www.imdb.com/title/tt29003256/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt28727524\nPoster: https://m.media-amazon.com/images/M/MV5BNGM3ZDYyMDAtZDk0My00YTBhLWEzYzItMjUwMmY1YmJiODRlXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Kids
-UID:tt28727524-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt28727524/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20270225
@@ -163,20 +135,6 @@ UID:tt32323252-2026-09-10@imdb-de-calendar
 URL:https://www.imdb.com/title/tt32323252/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260513
-DESCRIPTION:IMDB: tt41691696
-SUMMARY:🍿 Wacken - Hearts Full of Metal
-UID:tt41691696-2026-05-13@imdb-de-calendar
-URL:https://www.imdb.com/title/tt41691696/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20270222
-DESCRIPTION:IMDB: tt42051155
-SUMMARY:🍿 The Ogglies 2
-UID:tt42051155-2027-02-22@imdb-de-calendar
-URL:https://www.imdb.com/title/tt42051155/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261106
 DESCRIPTION:IMDB: tt32642156\nPoster: https://m.media-amazon.com/images/M/MV5BZDczZmYxNWEtNjNkNy00OWEwLWE3YjQtMzJmNWE5N2VlYjI4XkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 The Shrinking Man
@@ -196,13 +154,6 @@ DESCRIPTION:IMDB: tt27419466\nPoster: https://m.media-amazon.com/images/M/MV5BMT
 SUMMARY:🍿 Moana
 UID:tt27419466-2026-07-09@imdb-de-calendar
 URL:https://www.imdb.com/title/tt27419466/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt39070180\nPoster: https://m.media-amazon.com/images/M/MV5BNDdmNzNhMDUtYjc4Ny00NDNjLTk5YjQtZTEyODQ1MGM4YTc3XkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Portuguese Love
-UID:tt39070180-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt39070180/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260924
@@ -241,7 +192,7 @@ URL:https://www.imdb.com/title/tt42170126/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260806
-DESCRIPTION:IMDB: tt14173636\nPoster: https://m.media-amazon.com/images/M/MV5BN2ZjZWI0YTctOGJmNC00MWJlLTk4MTAtM2RlZjgxYmY4ZmE5XkEyXkFqcGc@._V1_.jpg
+DESCRIPTION:IMDB: tt14173636\nPoster: https://m.media-amazon.com/images/M/MV5BMjI0MzJjMjctNmQzZi00Y2U4LWEwZGItMmE3NDUzNzk1YzY3XkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 The Invite
 UID:tt14173636-2026-08-06@imdb-de-calendar
 URL:https://www.imdb.com/title/tt14173636/
@@ -252,6 +203,13 @@ DESCRIPTION:IMDB: tt29544253\nPoster: https://m.media-amazon.com/images/M/MV5BND
 SUMMARY:🍿 Night of the Zoopocalypse
 UID:tt29544253-2026-06-11@imdb-de-calendar
 URL:https://www.imdb.com/title/tt29544253/
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260716
+DESCRIPTION:IMDB: tt41991199\nPoster: https://m.media-amazon.com/images/M/MV5BMGEwMTdhODYtMTI1Ny00YTNlLTgxMjktNmEyMGUzYTY1ZGM3XkEyXkFqcGc@._V1_.jpg
+SUMMARY:🍿 Insekten - Helden im Verborgenen
+UID:tt41991199-2026-07-16@imdb-de-calendar
+URL:https://www.imdb.com/title/tt41991199/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260611
@@ -266,13 +224,6 @@ DESCRIPTION:IMDB: tt37495239\nPoster: https://m.media-amazon.com/images/M/MV5BNj
 SUMMARY:🍿 L'enfant du désert
 UID:tt37495239-2026-05-21@imdb-de-calendar
 URL:https://www.imdb.com/title/tt37495239/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt39948195\nPoster: https://m.media-amazon.com/images/M/MV5BNWUzZWE1ZTYtYmU3My00YmYzLWJhMGUtYTRjNmQzOTIwNmVkXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Inner Emigrants
-UID:tt39948195-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt39948195/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260618
@@ -345,13 +296,6 @@ UID:tt31339071-2027-02-04@imdb-de-calendar
 URL:https://www.imdb.com/title/tt31339071/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt36163614\nPoster: https://m.media-amazon.com/images/M/MV5BYWUyYTU5YTAtODJmZC00Mzk4LTk1NWYtYjM3NzJkOGUyZWQxXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Iron Maiden: Burning Ambition
-UID:tt36163614-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt36163614/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260521
 DESCRIPTION:IMDB: tt33996352\nPoster: https://m.media-amazon.com/images/M/MV5BNmE5MDc0MDMtOTI2Zi00M2VkLTk5NTItZWUzMGY1YTQyNmE1XkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Miss Moxy
@@ -364,13 +308,6 @@ DESCRIPTION:IMDB: tt29283995\nPoster: https://m.media-amazon.com/images/M/MV5BMT
 SUMMARY:🍿 Hen
 UID:tt29283995-2026-08-06@imdb-de-calendar
 URL:https://www.imdb.com/title/tt29283995/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt29271622\nPoster: https://m.media-amazon.com/images/M/MV5BOGU3MTc1MWUtOWJkMC00MjRiLWJlN2ItNDYzMzRhZWZhZjAxXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Palestine 36
-UID:tt29271622-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt29271622/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260604
@@ -409,17 +346,17 @@ URL:https://www.imdb.com/title/tt33763941/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260528
-DESCRIPTION:IMDB: tt37021394
+DESCRIPTION:IMDB: tt37021394\nPoster: https://m.media-amazon.com/images/M/MV5BYzVhMTBmYTQtZTJiMy00MmFhLWE3YTItNWNjNDc0OGQ0Y2VlXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Born to Fake
 UID:tt37021394-2026-05-28@imdb-de-calendar
 URL:https://www.imdb.com/title/tt37021394/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt35325482\nPoster: https://m.media-amazon.com/images/M/MV5BZjUwMDllMWUtOTg1MC00MmVkLWFhZGMtMjY1M2FiY2VjNjI3XkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Ein Münchner im Himmel - Der Tod ist erst der Anfang
-UID:tt35325482-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt35325482/
+DTSTART;VALUE=DATE:20260730
+DESCRIPTION:IMDB: tt28088049\nPoster: https://m.media-amazon.com/images/M/MV5BN2I4ODhmMDItM2EzNS00NmM0LTkzOTQtMWM5MTNhOTYzNDM3XkEyXkFqcGc@._V1_.jpg
+SUMMARY:🍿 Bitter Christmas
+UID:tt28088049-2026-07-30@imdb-de-calendar
+URL:https://www.imdb.com/title/tt28088049/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261008
@@ -569,32 +506,11 @@ UID:tt21349688-2026-06-04@imdb-de-calendar
 URL:https://www.imdb.com/title/tt21349688/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt30691223\nPoster: https://m.media-amazon.com/images/M/MV5BZDY3MGI3ZmYtMDk4NS00NzJhLWFiODEtYTkzYzhlYjkyZGEwXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 The Great Ambition
-UID:tt30691223-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt30691223/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260723
 DESCRIPTION:IMDB: tt38607784\nPoster: https://m.media-amazon.com/images/M/MV5BNGY3ZGU2ODItYzM0Mi00ZDQwLWE5NTEtZDA3NWQwZGRjM2JmXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Good Vibes Only
 UID:tt38607784-2026-07-23@imdb-de-calendar
 URL:https://www.imdb.com/title/tt38607784/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260521
-DESCRIPTION:IMDB: tt30825738\nPoster: https://m.media-amazon.com/images/M/MV5BYzVkMmJhNTgtNjYwOS00YjM0LThlNWEtNGExNmIxZjVkMmJhXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Star Wars: The Mandalorian and Grogu
-UID:tt30825738-2026-05-21@imdb-de-calendar
-URL:https://www.imdb.com/title/tt30825738/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt39383613\nPoster: https://m.media-amazon.com/images/M/MV5BYjE5YjM0OTMtMTI2Yy00YjJlLWE2OWYtYjNhZTY2YmZjOGExXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Was an Empfindsamkeit bleibt
-UID:tt39383613-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt39383613/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260618
@@ -625,13 +541,6 @@ UID:tt32358921-2026-06-04@imdb-de-calendar
 URL:https://www.imdb.com/title/tt32358921/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260528
-DESCRIPTION:IMDB: tt32499466\nPoster: https://m.media-amazon.com/images/M/MV5BMWZlNDQyYzctZmMwNi00MmU2LTkyNGQtMWYyMjhmNGE3NTg5XkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Finding Emily
-UID:tt32499466-2026-05-28@imdb-de-calendar
-URL:https://www.imdb.com/title/tt32499466/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260625
 DESCRIPTION:IMDB: tt29002950\nPoster: https://m.media-amazon.com/images/M/MV5BODZmOGMxNTEtOWYzMC00OWU4LTk3NjQtMWZmMmE4MTMxZDkyXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Resurrection
@@ -640,7 +549,7 @@ URL:https://www.imdb.com/title/tt29002950/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260618
-DESCRIPTION:IMDB: tt35149269\nPoster: https://m.media-amazon.com/images/M/MV5BMDQ5NGIzZGItNjg1YS00M2ZjLTlkNzYtYzMyMmIxYzhjYjk5XkEyXkFqcGc@._V1_.jpg
+DESCRIPTION:IMDB: tt35149269\nPoster: https://m.media-amazon.com/images/M/MV5BZDQ4ZjlmYTctN2QzOC00MjNhLWI5YjctNmRiYmE5OTIwMTNlXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Nulpen
 UID:tt35149269-2026-06-18@imdb-de-calendar
 URL:https://www.imdb.com/title/tt35149269/
@@ -667,11 +576,32 @@ UID:tt35331003-2026-05-21@imdb-de-calendar
 URL:https://www.imdb.com/title/tt35331003/
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260702
+DESCRIPTION:IMDB: tt39814688\nPoster: https://m.media-amazon.com/images/M/MV5BOTczZmMxMzctOTY4Ny00OWU4LWExYzYtMWVmYWZlMTdiNGMyXkEyXkFqcGc@._V1_.jpg
+SUMMARY:🍿 Santiago: The Camino Therapy
+UID:tt39814688-2026-07-02@imdb-de-calendar
+URL:https://www.imdb.com/title/tt39814688/
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260723
+DESCRIPTION:IMDB: tt29355505\nPoster: https://m.media-amazon.com/images/M/MV5BZTI1YTBiNmEtYWUxZi00YzFkLWIzNjMtMmZjMmY2NzM0ZWMzXkEyXkFqcGc@._V1_.jpg
+SUMMARY:🍿 Toy Story 5
+UID:tt29355505-2026-07-23@imdb-de-calendar
+URL:https://www.imdb.com/title/tt29355505/
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260625
 DESCRIPTION:IMDB: tt26940053\nPoster: https://m.media-amazon.com/images/M/MV5BYWY4MWMxZGEtMDc2ZC00ZjZlLTg3ZWUtODJmMDVhMmRjZTVhXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 The Summer Book
 UID:tt26940053-2026-06-25@imdb-de-calendar
 URL:https://www.imdb.com/title/tt26940053/
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260910
+DESCRIPTION:IMDB: tt32499466\nPoster: https://m.media-amazon.com/images/M/MV5BN2MzZDk2Y2ItYzNiZS00Y2Y3LTg2NzYtMmI3NmI4NGFhYzBmXkEyXkFqcGc@._V1_.jpg
+SUMMARY:🍿 Finding Emily
+UID:tt32499466-2026-09-10@imdb-de-calendar
+URL:https://www.imdb.com/title/tt32499466/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260813
@@ -714,13 +644,6 @@ DESCRIPTION:IMDB: tt34934816\nPoster: https://m.media-amazon.com/images/M/MV5BYj
 SUMMARY:🍿 My Wife Cries
 UID:tt34934816-2026-06-11@imdb-de-calendar
 URL:https://www.imdb.com/title/tt34934816/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt31065630\nPoster: https://m.media-amazon.com/images/M/MV5BZWI1OTk3NmMtZmE3NS00MWM3LTkxYjEtYjY5OTdkNjBlMzM3XkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Orphan
-UID:tt31065630-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt31065630/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260618
@@ -779,25 +702,11 @@ UID:tt36352591-2026-08-06@imdb-de-calendar
 URL:https://www.imdb.com/title/tt36352591/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt32565993\nPoster: https://m.media-amazon.com/images/M/MV5BNTFmZWI4YmMtNmQ0ZC00ZGQwLTk1OWEtZjAyZmIzOGY0MGFiXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 The Sheep Detectives
-UID:tt32565993-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt32565993/
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260521
 DESCRIPTION:IMDB: tt27200708\nPoster: https://m.media-amazon.com/images/M/MV5BZWM0NTIzMWEtOWU1ZC00OTEyLThmNTItYjM1N2Y1MDllMGYzXkEyXkFqcGc@._V1_.jpg
 SUMMARY:🍿 Mother Mary
 UID:tt27200708-2026-05-21@imdb-de-calendar
 URL:https://www.imdb.com/title/tt27200708/
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt37539106\nPoster: https://m.media-amazon.com/images/M/MV5BNmE1MWFlNDMtOTY5Mi00NzU2LWIwZWEtOTg1YmIyODM1NmJmXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 The Cowboy
-UID:tt37539106-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt37539106/
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20260521
@@ -828,10 +737,10 @@ UID:tt36642485-2026-05-28@imdb-de-calendar
 URL:https://www.imdb.com/title/tt36642485/
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260514
-DESCRIPTION:IMDB: tt19883490\nPoster: https://m.media-amazon.com/images/M/MV5BMWM2YmQwYjAtOGUwMS00NDAzLTlkM2EtODJhNzkyODNmYTgzXkEyXkFqcGc@._V1_.jpg
-SUMMARY:🍿 Meine Freundin Conni 2 - Abenteuer mit Kranich Klaus
-UID:tt19883490-2026-05-14@imdb-de-calendar
-URL:https://www.imdb.com/title/tt19883490/
+DTSTART;VALUE=DATE:20260521
+DESCRIPTION:IMDB: tt30825738\nPoster: https://m.media-amazon.com/images/M/MV5BYzVkMmJhNTgtNjYwOS00YjM0LThlNWEtNGExNmIxZjVkMmJhXkEyXkFqcGc@._V1_.jpg
+SUMMARY:🍿 Star Wars: The Mandalorian and Grogu
+UID:tt30825738-2026-05-21@imdb-de-calendar
+URL:https://www.imdb.com/title/tt30825738/
 END:VEVENT
 END:VCALENDAR
