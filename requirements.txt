@@ -1,7 +1,14 @@
-curl_cffi>=0.5.0
-scrapling
-ics
-playwright
-patchright
-msgspec
-browserforge
+# Versionen gepinnt auf den Stand des letzten erfolgreichen CI-Runs (2026-07-27).
+# Grund: apify_fingerprint_datapoints 0.14.0 bricht die Header-Generierung in
+# browserforge ("No headers based on this input can be generated"), wodurch schon
+# der Import von scrapling.fetchers fehlschlaegt.
+curl_cffi==0.15.0
+scrapling==0.4.12
+ics==0.7.3
+playwright==1.61.0
+patchright==1.61.2
+msgspec==0.21.1
+browserforge==1.2.4
+
+# transitiv, aber versionskritisch -> ebenfalls gepinnt
+apify_fingerprint_datapoints==0.13.0
